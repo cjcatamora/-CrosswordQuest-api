@@ -1,10 +1,10 @@
-# [CrosswordQuest] API
+# CrosswordQuest API
 
-Backend API for **[CrosswordQuest]**, a tournament game for the SorSU Bulan Campus library.
+Backend API for **CrosswordQuest**, a tournament game for the SorSU Bulan Campus library.
 CS 313 Software Engineering 1, A.Y. 2026-2027.
 
-- Developer: [Christine Joy T. Catamora] ([cjcatamora]), BSCS [3-1]
-- Group and game concept: [Group 6]
+- Developer: Christine Joy T. Catamora (cjcatamora), BSCS 3-1
+- Group and game concept: Group 6
 
 This is my own build of my group's game concept. Every commit in this repository was made by me, with Git, on my own computer or in my own Codespace.
 
