@@ -20,8 +20,8 @@ This is my own build of my group's game concept. Every commit in this repository
 ## Setup
 
 ```
-git clone [repository-url]
-cd [folder-name]
+git clone https://github.com/cjcatamora/CrosswordQuest-api.git
+cd CrosswordQuest-api
 npm install
 ```
 
@@ -60,11 +60,21 @@ Base URL: `http://localhost:3001/api/v1`
 
 ## What "completed" means in my game
 
-[One or two sentences: when does a player count as having completed a game? For example: "A player completed the game when they answered every question, even if some answers were wrong or timed out."]
+A player is considered to have **completed** the game when they stay until the game ends and correctly solve at least one word. Since Crossword Quest is a free-for-all race, players can answer any unsolved clue, and players who leave early without solving any words are marked as `completed = false` with a score of 0.
 
 ## Tables
 
-[List your tables, one line each, in the order of your migrations.]
+| # | Table | Description |
+|---|---|---|
+| 1 | hosts | Instructors who run games (username, password_hash) |
+| 2 | question_sets | A named set of clues |
+| 3 | crossword_grids | The grid layout (size) used by a game |
+| 4 | game_sessions | One game with its join code, shareable link, status (WAITING, PLAYING, FINISHED), start and end times |
+| 5 | players | A user's seat in a game with nickname, color, token, score and streak (one seat per account per game) |
+| 6 | clues | Clue text, answer, direction and grid position, belongs to a question set |
+| 7 | device_info | Platform and browser of each player |
+| 8 | solved_words | Which player solved which clue, and the points awarded |
+| 9 | users | Accounts (school_id, full_name, email, role), added by Design Change Notice 01. A later migration, add-user-id-to-players, links each player to a user |
 
 ## Database scripts
 
